@@ -14,9 +14,9 @@ const signupUser = async (req, res) => {
   } catch (error) {
     console.error(error);
     if (error.code === 11000 && error.keyPattern && error.keyPattern.email) {
-      return res.status(400).json({ error: "Email exists" });
+      return res.status(400).json("Email exists");
     } else {
-      return res.status(500).json({ error: "Sign-up error" });
+      return res.status(500).json("Sign-up error");
     }
   }
 };
@@ -28,17 +28,17 @@ const authenticateUser = async (req, res) => {
     const user = await userSchema.findOne({ email });
 
     if (!user) {
-      return res.status(404).json({ error: "User not found!" });
+      return res.status(404).json("User not found!");
     }
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
-      return res.status(401).json({ error: "Invalid password!" });
+      return res.status(401).json("Invalid password!");
     }
     return res.send({ message: "Login successful!" });
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ error: "Internal server error!" });
+    return res.status(500).json("Internal server error!");
   }
 };
 
