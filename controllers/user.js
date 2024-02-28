@@ -35,7 +35,7 @@ const authenticateUser = async (req, res) => {
     if (!isMatch) {
       return res.status(401).json("Invalid password!");
     }
-    return res.send({ message: "Login successful!" });
+    return res.status(200).json("Login successful!");
   } catch (error) {
     console.error(error);
     return res.status(500).json("Internal server error!");
