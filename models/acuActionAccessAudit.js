@@ -1,20 +1,19 @@
 const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
-const acuAccessAuditSchema = new mongoose.Schema({
+const acuActionAccessAuditSchema = new mongoose.Schema({
     historyId: Number,
+    actionAccessID: Number,
     accessID: Number,
-    accessFor: Number,
-    accessTypeID: Number,
-    pageID: Number,
+    actionID: Number,
     isActive: String,
     createdById: Number,
     modifiedById: Number,
     createdDate: String,
     modifiedDate: String,
     historyCreatedById: Number,
-    historyCreatedDate:String
+    historyCreatedDate: String 
 
-   });
+  });
 
-module.exports = mongoose.model("LoginDetails",  acuAccessAuditSchema);
+module.exports = mongoose.model("LoginDetails", acuActionAccessAuditSchema);
