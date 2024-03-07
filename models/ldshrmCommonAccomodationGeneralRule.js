@@ -9,11 +9,10 @@ const ldshrmCommonAccomodationGeneralRuleSchema = new mongoose.Schema({
     accGeneralRuleAccTypesId: Number,
     isDeleted: String,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     accGeneralRuleBUTypeId: Number
-
-});
+},
+   { timestamps: true }  
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonAccomodationGeneralRuleSchema);

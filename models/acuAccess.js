@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
-const acuAccessSchema = new mongoose.Schema({
+const acuAccessSchema = new mongoose.Schema(
+  {
     id: Number,
     accessFor: Number,
     accessTypeID: Number,
@@ -9,9 +10,8 @@ const acuAccessSchema = new mongoose.Schema({
     isActive: String,
     createdById: Number,
     modifiedById: Number,
-    createdDate: String,
-    modifiedDate: String
+  },
+  { timestamps: true }
+);
 
-});
-
-module.exports = mongoose.model("LoginDetails",  acuAccessSchema);
+module.exports = mongoose.model("LoginDetails", acuAccessSchema);

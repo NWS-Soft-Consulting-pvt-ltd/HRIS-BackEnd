@@ -7,15 +7,14 @@ const ldshrmCommonBankBranchMasterSchema = new mongoose.Schema({
       branchName: String,
       branchCode: String,
       ifscCode: String,
-      isActive: String,
+      isActive: Boolean,
       createdById: Number,
       createdByEmpId: Number,
-      createdDate: String,
       modifiedById: Number,
       modifiedByEmpId: Number,
-      modifiedDate: String,
-      isDeleted: String
-      
-});
+      isDeleted: Boolean
+      },
+      { timestamps: true }
+      );
 
-module.exports = mongoose.model("LoginDetails",  ldshrmCommonBankBranchMasterSchema);
+  module.exports = mongoose.model("LoginDetails",  ldshrmCommonBankBranchMasterSchema);

@@ -7,12 +7,11 @@ const ldshrmCommonCommonCultureSettingSchema = new mongoose.Schema({
     name: String,
     secondLangName: String,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     isDeleted: Boolean,
     cultureId: Number
-    
-});
+    },
+    { timestamps: true }
+    );
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCommonCultureSettingSchema);

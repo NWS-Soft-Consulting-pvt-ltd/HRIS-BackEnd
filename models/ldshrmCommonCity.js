@@ -8,12 +8,11 @@ const ldshrmCommonCitySchema = new mongoose.Schema({
     countryId: Number,
     stateId: Number,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     isDeleted: Boolean,
     cultureId: Number
-    
-});
+    },
+    { timestamps: true }
+    );
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCitySchema);

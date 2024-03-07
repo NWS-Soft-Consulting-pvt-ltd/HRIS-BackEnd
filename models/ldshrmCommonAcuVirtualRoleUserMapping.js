@@ -7,10 +7,9 @@ const ldshrmCommonAcuVirtualRoleUserMappingSchema = new mongoose.Schema({
     userId: Number,
     isActive: String,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String
-    
-});
+    },
+    { timestamps: true }
+    );
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonAcuVirtualRoleUserMappingSchema);

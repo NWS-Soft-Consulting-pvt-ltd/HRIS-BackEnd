@@ -7,15 +7,14 @@ const acuRoleMasterSchema = new mongoose.Schema({
     description: String,
     isActive: String,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     isDeleted: String,
     code: String,
     wfRoleCode: String,
     isSectionRequired: String,
     isCountryRequired: String
-
-});
+},
+{ timestamps: true }
+);
 
 module.exports = mongoose.model("LoginDetails",  acuRoleMasterSchema);

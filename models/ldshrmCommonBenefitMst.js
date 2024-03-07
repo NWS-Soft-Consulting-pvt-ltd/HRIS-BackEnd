@@ -8,8 +8,8 @@ const ldshrmCommonBenefitMstSchema = new mongoose.Schema({
     bnftCreatedById: Number,
     bnftCreatedDate: String,
     bnftModifiedById: Number,
-    bnft_ModifiedDate: String,
-    bnft_IsDeleted: Boolean
+    bnftModifiedDate: String,
+    bnftIsDeleted: Boolean
 
 });
 

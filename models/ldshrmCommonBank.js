@@ -7,13 +7,12 @@ const ldshrmCommonBankSchema = new mongoose.Schema({
     code: String,
     shortDescription: String,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
-    isDeleted: String,
+    isDeleted: Boolean,
     cultureId: Number,
     countryId: Number
-    
-});
+    },
+    { timestamps: true }
+    );
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonBankSchema);

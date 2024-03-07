@@ -7,12 +7,11 @@ const hrAcademicYearSchema = new mongoose.Schema({
     code: String,
     isCurrent: String,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
-    isDeleted: String,
+    isDeleted: Boolean,
     cultureId: Number 
-
-});
+},
+   { timestamps: true }  
+);
 
 module.exports = mongoose.model("LoginDetails",  hrAcademicYearSchema);

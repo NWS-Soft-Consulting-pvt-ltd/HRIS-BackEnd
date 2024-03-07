@@ -7,12 +7,11 @@ const ldshrmCommonAcuRolemasterSchema = new mongoose.Schema({
     description: String,
     isActive: String,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     isDeleted: String,
     code: String
-
-});
+},
+{ timestamps: true }  
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonAcuRolemasterSchema);

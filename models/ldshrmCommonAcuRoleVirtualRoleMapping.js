@@ -6,11 +6,10 @@ const ldshrmCommonAcuRoleVirtualRoleMappingSchema = new mongoose.Schema({
     virtualRoleId: Number,
     isActive: String,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
-    isDeleted: String 
-
-});
+    isDeleted: Boolean
+},
+{ timestamps: true }  
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonAcuRoleVirtualRoleMappingSchema);

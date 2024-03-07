@@ -9,10 +9,9 @@ const ldshrmCommonCareerLevelSchema = new mongoose.Schema({
     isActive: Boolean,
     isDeleted: Boolean,
     createdBy: Number,
-    createdDate: String,
     modifiedBy: Number,
-    modifiedDate: String
-   
-});
+    },
+   { timestamps: true }
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCareerLevelSchema);

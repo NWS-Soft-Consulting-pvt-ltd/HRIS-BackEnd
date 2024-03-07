@@ -9,11 +9,10 @@ const ldshrmCommonCityAreaMappingSchema = new mongoose.Schema({
     areaCode: String,
     isDeleted: Boolean,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     cultureId: Number
-    
-});
+    },
+    { timestamps: true }
+    );
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCityAreaMappingSchema);

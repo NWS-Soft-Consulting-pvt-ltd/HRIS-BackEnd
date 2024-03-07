@@ -8,9 +8,8 @@ const acuActionAccess = new mongoose.Schema({
      isActive: String,
      createdById: Number,
      modifiedById: Number,
-     createdDate: String,
-     modifiedDate: String
-
-  });
+   },
+  { timestamps: true }
+  );
 
 module.exports = mongoose.model("LoginDetails",  acuActionAccess);

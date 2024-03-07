@@ -7,11 +7,10 @@ const ldshrmCommonCostCentreChangeCodeSchema = new mongoose.Schema({
     code: String,
     description: String,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     isDeleted: Boolean
-
-});
+},
+    { timestamps: true }
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCostCentreChangeCodeSchema);

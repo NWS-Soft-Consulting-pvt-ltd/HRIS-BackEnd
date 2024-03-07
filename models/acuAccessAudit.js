@@ -10,11 +10,11 @@ const acuAccessAuditSchema = new mongoose.Schema({
     isActive: String,
     createdById: Number,
     modifiedById: Number,
-    createdDate: String,
-    modifiedDate: String,
     historyCreatedById: Number,
     historyCreatedDate:String
+    },
+    { timestamps: true }
 
-   });
+   );
 
 module.exports = mongoose.model("LoginDetails",  acuAccessAuditSchema);

@@ -7,17 +7,16 @@ const ldshrmCommonBankMasterSchema = new mongoose.Schema({
     bankName: String,
     bankCode: String,
     swiftCode: String,
-    isActive: String,
+    isActive: Boolean,
     isUsedInBankTransferFile: String,
     createdById: Number,
     createdByEmpId: Number,
-    createdDate: String,
     modifiedById: Number,
     modifiedByEmpId: Number,
-    modifiedDate: String,
-    isDeleted: String,
+    isDeleted: Boolean,
     shortName: String
-
-});
+},
+{ timestamps: true }
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonBankMasterSchema);
