@@ -8,11 +8,10 @@ const ldshrmCommonCountryEmpTypWiseUniqueDocMappingSchema = new mongoose.Schema(
     uniqueDocId: Number,
     isDeleted: Boolean,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     cultureId: Number
-
-});
+},
+{ timestamps: true }
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCountryEmpTypWiseUniqueDocMappingSchema);

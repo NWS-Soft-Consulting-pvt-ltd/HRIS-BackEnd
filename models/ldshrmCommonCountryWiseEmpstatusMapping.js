@@ -8,10 +8,9 @@ const ldshrmCommonCountryWiseEmpstatusMappingSchema = new mongoose.Schema({
     toEmpStatusId: Number,
     isDeleted: Boolean,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String
-
-});
+    },
+    { timestamps: true }
+    );
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCountryWiseEmpstatusMappingSchema);

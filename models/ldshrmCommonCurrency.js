@@ -7,12 +7,14 @@ const ldshrmCommonCurrencySchema = new mongoose.Schema({
     code: String,
     lowestDenominator: String,
     createdById: Number,
-    createdDate: String,
+    // createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
+    // modifiedDate: String,
     isDeleted: Boolean,
     cultureId: Number
+},
 
-});
+
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCurrencySchema);

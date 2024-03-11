@@ -7,7 +7,7 @@ const acuAccessSchema = new mongoose.Schema(
     accessFor: Number,
     accessTypeID: Number,
     pageID: Number,
-    isActive: String,
+    isActive: Boolean,
     createdById: Number,
     modifiedById: Number,
   },

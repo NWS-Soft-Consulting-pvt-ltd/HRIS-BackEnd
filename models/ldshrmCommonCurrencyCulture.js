@@ -6,12 +6,11 @@ const ldshrmCommonCurrencyCultureSchema = new mongoose.Schema({
     currencyId: Number,
     name: String,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     isDeleted: Boolean,
     cultureId: Number
-    
-});
+    },
+    { timestamps: true }
+    );
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCurrencyCultureSchema);

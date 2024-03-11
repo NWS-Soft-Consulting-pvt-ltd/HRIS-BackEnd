@@ -10,11 +10,10 @@ const ldshrmCommonCountryLevelActionTakerSchema = new mongoose.Schema({
     isDeleted: Boolean,
     createdById: Number,
     createdByEmpId: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     modifiedByEmpId: Number
-
-});
+},
+   { timestamps: true }
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCountryLevelActionTakerSchema);

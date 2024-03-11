@@ -10,9 +10,7 @@ const ldshrmCommonCountrySchema = new mongoose.Schema({
     currencyId: Number,
     probationDays: Number,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     isDeleted: Boolean,
     cultureId: Number,
     tableName: String,
@@ -25,7 +23,8 @@ const ldshrmCommonCountrySchema = new mongoose.Schema({
     contact: String,
     faxNo: String,
     mobCountryCode: String
-
-});
+},
+{ timestamps: true }
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCountrySchema);

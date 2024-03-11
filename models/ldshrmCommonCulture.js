@@ -6,12 +6,11 @@ const ldshrmCommonCultureSchema = new mongoose.Schema({
     name: String,
     code: String,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     isDeleted: Boolean,
     tableName: String
-
-});
+},
+    { timestamps: true }
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCultureSchema);
