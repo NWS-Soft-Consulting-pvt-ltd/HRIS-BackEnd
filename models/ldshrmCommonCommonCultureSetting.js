@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCommonCultureSettingSchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     keys: String,
     name: String,
     secondLangName: String,

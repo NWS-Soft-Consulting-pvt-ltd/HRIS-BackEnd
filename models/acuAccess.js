@@ -3,7 +3,7 @@ mongoose.pluralize(null);
 
 const acuAccessSchema = new mongoose.Schema(
   {
-    id: Number,
+    id: String,
     accessFor: Number,
     accessTypeID: Number,
     pageID: Number,

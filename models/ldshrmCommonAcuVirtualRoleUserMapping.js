@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonAcuVirtualRoleUserMappingSchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     virtualRoleId: Number,
     userId: Number,
     isActive: String,

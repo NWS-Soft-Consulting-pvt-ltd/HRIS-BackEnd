@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCountryEmpTypWiseUniqueDocMappingSchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     countryId: Number,
     empCandTypeId: Number,
     uniqueDocId: Number,

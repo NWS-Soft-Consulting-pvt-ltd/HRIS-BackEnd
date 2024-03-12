@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCurrencyCultureSchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     currencyId: Number,
     name: String,
     createdById: Number,

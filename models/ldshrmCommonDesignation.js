@@ -1,23 +1,20 @@
 const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
-const ldshrmCommonDepartmentSchema = new mongoose.Schema({
-    id: String,
+const ldshrmCommonDesignationSchema = new mongoose.Schema({
+    id: Number,
     name: String,
     code: String,
-    deptType: Number,
-    segmentType: Number,
-    depCharacteristicId: Number,
+    desCategory: Number,
     shortDescription: String,
-    workingHours: String,
     createdById: Number,
     modifiedById: Number,
     isDeleted: Boolean,
     cultureId: Number,
     tableName: String
-    
+
 },
 { timestamps: true }
 );
 
-module.exports = mongoose.model("LoginDetails",  ldshrmCommonDepartmentSchema);
+module.exports = mongoose.model("LoginDetails",  ldshrmCommonDesignationSchema);

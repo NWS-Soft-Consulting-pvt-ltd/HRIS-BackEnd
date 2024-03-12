@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCountrySchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     name: String,
     code: String,
     isOperatingCountry: Boolean,

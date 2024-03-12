@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const hrAcademicYearSchema = new mongoose.Schema({
-    iD: Number,
+    iD: String,
     name: String,
     code: String,
     isCurrent: String,

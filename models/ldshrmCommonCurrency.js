@@ -2,18 +2,17 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCurrencySchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     name: String,
     code: String,
     lowestDenominator: String,
     createdById: Number,
-    // createdDate: String,
     modifiedById: Number,
-    // modifiedDate: String,
     isDeleted: Boolean,
     cultureId: Number
+    
 },
-
+{ timestamps: true }
 
 );
 

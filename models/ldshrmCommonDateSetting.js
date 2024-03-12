@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonDateSettingSchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     dateFormat: String,
     dateFormatCode: Number,
     isdeleted: Boolean,

@@ -1,18 +1,18 @@
 const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
-const ldshrmCommonBankSchema = new mongoose.Schema({
+const ldshrmCommonDistrictSchema = new mongoose.Schema({
     id: String,
-    bankName: String,
+    name: String,
     code: String,
     shortDescription: String,
     createdById: Number,
     modifiedById: Number,
     isDeleted: Boolean,
     cultureId: Number,
-    countryId: Number
-    },
-    { timestamps: true }
-    );
+    tableName: String
+},
+{ timestamps: true }
+);
 
-module.exports = mongoose.model("LoginDetails",  ldshrmCommonBankSchema);
+module.exports = mongoose.model("LoginDetails",  ldshrmCommonDistrictSchema);

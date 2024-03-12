@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const acuPageMasterSchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     pageName: String,
     pageUrl: String,
     parentID: Number,

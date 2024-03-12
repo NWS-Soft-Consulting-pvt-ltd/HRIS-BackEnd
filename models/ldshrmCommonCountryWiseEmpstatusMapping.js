@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCountryWiseEmpstatusMappingSchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     countryId: Number,
     fromEmpStatusId: Number,
     toEmpStatusId: Number,

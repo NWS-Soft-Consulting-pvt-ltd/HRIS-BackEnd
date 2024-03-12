@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCountryLevelActionTakerSchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     countryId: Number,
     roleId: Number,
     empId: Number,

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const acuRoleMasterSchema = new mongoose.Schema({
-    iD: Number,
+    iD: String,
     role: String,
     description: String,
     isActive: String,

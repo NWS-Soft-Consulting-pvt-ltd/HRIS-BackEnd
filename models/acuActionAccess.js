@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const acuActionAccess = new mongoose.Schema({
-     id: Number,
+     id: String,
      accessID: Number,
      actionID: Number,
      isActive: String,

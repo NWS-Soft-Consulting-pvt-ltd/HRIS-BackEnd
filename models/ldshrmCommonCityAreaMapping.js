@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCityAreaMappingSchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     countryId: Number,
     cityId: Number,
     area: String,

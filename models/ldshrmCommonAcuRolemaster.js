@@ -2,10 +2,10 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonAcuRolemasterSchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     role: String,
     description: String,
-    isActive: String,
+    isActive: Boolean,
     createdById: Number,
     modifiedById: Number,
     isDeleted: String,

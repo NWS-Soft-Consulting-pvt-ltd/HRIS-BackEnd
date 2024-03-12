@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCareerLevelSchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     name: String,
     shortName: String,
     code: String,
