@@ -2,10 +2,14 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const acuUserRoleDetailsSchema = new mongoose.Schema({
-     iD: String,
+    id:{
+        type: String,
+        unique:true,
+        required: true,
+    },
      userID: Number,
      roleID: Number,
-     isActive: String
+     isActive: Boolean
 
     });
 

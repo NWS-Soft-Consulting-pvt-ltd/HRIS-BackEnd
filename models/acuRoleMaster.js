@@ -2,17 +2,21 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const acuRoleMasterSchema = new mongoose.Schema({
-    iD: String,
+    id:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     role: String,
     description: String,
-    isActive: String,
+    isActive: Boolean,
     createdById: Number,
     modifiedById: Number,
-    isDeleted: String,
+    isDeleted: Boolean,
     code: String,
     wfRoleCode: String,
-    isSectionRequired: String,
-    isCountryRequired: String
+    isSectionRequired: Boolean,
+    isCountryRequired: Boolean
 },
 { timestamps: true }
 );

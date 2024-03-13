@@ -2,10 +2,14 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const hrAcademicYearSchema = new mongoose.Schema({
-    iD: String,
+    id:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     name: String,
     code: String,
-    isCurrent: String,
+    isCurrent: Boolean,
     createdById: Number,
     modifiedById: Number,
     isDeleted: Boolean,

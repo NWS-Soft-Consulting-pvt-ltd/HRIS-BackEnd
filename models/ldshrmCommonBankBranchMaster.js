@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonBankBranchMasterSchema = new mongoose.Schema({
-      branchID: Number,
+    branchID:{
+        type: String,
+        unique:true,
+        required: true,
+    },
       bankId: Number,
       branchName: String,
       branchCode: String,

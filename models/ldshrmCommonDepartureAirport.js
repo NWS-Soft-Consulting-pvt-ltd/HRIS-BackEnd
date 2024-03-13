@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonDepartureAirportSchema = new mongoose.Schema({
-    depAirportId: String,
+    depAirportId:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     depAirportName: String,
     depAirportCode: String,
     depAirportCountryId: Number,

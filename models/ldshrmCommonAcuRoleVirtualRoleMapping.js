@@ -3,8 +3,12 @@ mongoose.pluralize(null);
 
 const ldshrmCommonAcuRoleVirtualRoleMappingSchema = new mongoose.Schema({
     roleId: Number,
-    virtualRoleId: Number,
-    isActive: String,
+    virtualRoleId:{
+        type: String,
+        unique:true,
+        required: true,
+    },
+    isActive: Boolean,
     createdById: Number,
     modifiedById: Number,
     isDeleted: Boolean

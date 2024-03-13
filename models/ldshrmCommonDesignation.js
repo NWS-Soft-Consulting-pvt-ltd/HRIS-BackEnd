@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonDesignationSchema = new mongoose.Schema({
-    id: Number,
+    id:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     name: String,
     code: String,
     desCategory: Number,

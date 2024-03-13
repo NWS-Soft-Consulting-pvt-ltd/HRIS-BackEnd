@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const errorHandlingSchema = new mongoose.Schema({
-    pkErrorHandlingID: Number,
+    pkErrorHandlingID:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     errorNumber: Number,
     errorMessage: String,
     errorSeverity: Number,

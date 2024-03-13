@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCountryWiseDateConfigurationSchema = new mongoose.Schema({
-    dateConfigId: Number,
+    dateConfigId:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     dateConfigCountryId: Number,
     dateConfigDateFormat: String,
     dateConfigTimeFormat: String,
@@ -12,11 +16,10 @@ const ldshrmCommonCountryWiseDateConfigurationSchema = new mongoose.Schema({
     dateConfigDateFormatCode: String,
     dateConfigDBDateFormatCode: String,
     dateConfigCreatedById: Number,
-    dateConfigCreatedDate: String,
     dateConfigModifiedById: Number,
-    dateConfigModifiedDate: String,
     dateConfigIsDeleted: Boolean
-
-});
+},
+{ timestamps: true }
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCountryWiseDateConfigurationSchema);

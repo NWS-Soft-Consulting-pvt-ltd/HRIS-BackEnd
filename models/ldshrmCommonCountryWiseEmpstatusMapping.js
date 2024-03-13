@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCountryWiseEmpstatusMappingSchema = new mongoose.Schema({
-    id: String,
+    id:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     countryId: Number,
     fromEmpStatusId: Number,
     toEmpStatusId: Number,

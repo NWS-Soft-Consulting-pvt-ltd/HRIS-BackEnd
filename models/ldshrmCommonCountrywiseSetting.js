@@ -2,16 +2,18 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCountrywiseSettingSchema = new mongoose.Schema({
-    settId: Number,
+    settId:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     settCountryId: Number,
     settKeys: String,
     settValue: String,
     settKeysDescription: String,
     settIsDeleted: Boolean,
     settCreatedById: Number,
-    settCreatedDate: String,
     settModifiedBy: Number,
-    settModifiedDate: String,
     settCultureId: Number,
     settCode: String,
     column1: String,
@@ -24,7 +26,8 @@ const ldshrmCommonCountrywiseSettingSchema = new mongoose.Schema({
     column8: String,
     column9: String,
     column10: String
-    
-});
+    },
+    { timestamps: true }
+    );
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCountrywiseSettingSchema);

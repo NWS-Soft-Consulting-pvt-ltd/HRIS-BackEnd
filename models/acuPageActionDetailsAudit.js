@@ -2,11 +2,18 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const acuPageActionDetailsAuditSchema = new mongoose.Schema({
-    historyId: Number,
+    historyId:{
+        type: String,
+        unique:true,
+        required: true,
+        },
     pageActionDetailsID: Number,
     pageID: Number,
     actionID: Number,
-    isActive: String,
+    isActive:{
+        type: Boolean,
+        required: true,
+        },
     createdById: Number,
     modifiedById: Number,
     historyCreatedById: Number,

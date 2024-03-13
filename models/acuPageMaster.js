@@ -2,18 +2,22 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const acuPageMasterSchema = new mongoose.Schema({
-    id: String,
+  id:{
+    type: String,
+    unique:true,
+    required: true,
+    },
     pageName: String,
     pageUrl: String,
     parentID: Number,
     isInternalLink: Number,
-    isActive: String,
+    isActive: Boolean,
     displayorder: Number,
     iconImagePath: String,
     moduleId: Number,
-    isDisplayedInMenu: String,
+    isDisplayedInMenu: Boolean,
     imagePath: String,
-    IsAngularRoute: String,
+    IsAngularRoute: Boolean,
     groupid: Number
 
   });

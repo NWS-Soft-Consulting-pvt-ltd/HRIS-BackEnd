@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonBankMasterSchema = new mongoose.Schema({
-    bankId: Number,
+    bankId:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     countryId: Number,
     bankName: String,
     bankCode: String,

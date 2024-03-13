@@ -2,11 +2,18 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const acuActionMasterSchema = new mongoose.Schema({
-    id: String,
+    id:{
+        type: String,
+        unique:true,
+        required: true,
+        },
     action: String,
     description: String,
-    isActive: String
-    
-});
+    isActive:{
+        type: Boolean,
+        required: true,
+        },
+   
+    });
 
 module.exports = mongoose.model("LoginDetails",  acuActionMasterSchema);

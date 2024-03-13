@@ -1,8 +1,12 @@
 const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
-const employeeDetailsSchema = new mongoose.Schema({
-    id: String,
+const ldshrmCommonDoamasterallSchema = new mongoose.Schema({
+    id:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     moduleId: Number,
     gradeId: Number,
     actionId: Number,
@@ -11,16 +15,10 @@ const employeeDetailsSchema = new mongoose.Schema({
     startDate: String,
     endDate: String,
     roleId: Number,
-    
+    countryId: Number,
+    empTypeId: Number
+    },
+    { timestamps: true }
+    );
 
-    // qualification: String,
-    // registrationNumber: String,
-    // mobileNumber: Number,
-    // doctorAddress: String,
-    // doctorAddress: String,
-    // vdid: String,
-    // districtName: String,
-    // emailAddress: String,
-});
-
-module.exports = mongoose.model("LoginDetails",  employeeDetailsSchema);
+module.exports = mongoose.model("LoginDetails",  ldshrmCommonDoamasterallSchema);

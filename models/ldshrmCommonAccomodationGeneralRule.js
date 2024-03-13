@@ -2,12 +2,16 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonAccomodationGeneralRuleSchema = new mongoose.Schema({
-    accGeneralRuleId: Number,
+    accGeneralRuleId:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     accGeneralRuleCountryId: Number,
     accGeneralRuleEmpTypeId: Number,
     accGeneralRuleGradeId: Number,
     accGeneralRuleAccTypesId: Number,
-    isDeleted: String,
+    isDeleted: Boolean,
     createdById: Number,
     modifiedById: Number,
     accGeneralRuleBUTypeId: Number

@@ -2,10 +2,14 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonAcuVirtualRoleUserMappingSchema = new mongoose.Schema({
-    id: String,
+    id:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     virtualRoleId: Number,
     userId: Number,
-    isActive: String,
+    isActive: Boolean,
     createdById: Number,
     modifiedById: Number,
     },

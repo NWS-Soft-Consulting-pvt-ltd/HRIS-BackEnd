@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCompanyGradeSettingSchema = new mongoose.Schema({
-    buGrLvId: Number,
+    buGrLvId:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     buGrLvBuId: Number,
     buGrLvGradeId: Number,
     buGrLvEmpStatusId: Number,
@@ -17,9 +21,7 @@ const ldshrmCommonCompanyGradeSettingSchema = new mongoose.Schema({
     buGrLvOvertimeEligibility: String,
     buGrLvOvertimeFactor: String,
     buGrLvCreatedById: Number,
-    buGrLvCreatedDate: String,
     buGrLvModifiedById: Number,
-    buGrLvModifiedDate: String,
     buGrLvIsDeleted: Boolean,
     buGrLvCultureId: Number,
     column1: String,
@@ -32,7 +34,8 @@ const ldshrmCommonCompanyGradeSettingSchema = new mongoose.Schema({
     column8: String,
     column9: String,
     column10: String,
-
-});
+},
+  { timestamps: true }
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonCompanyGradeSettingSchema);

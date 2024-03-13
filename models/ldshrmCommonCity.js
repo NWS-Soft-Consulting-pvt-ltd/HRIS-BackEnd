@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonCitySchema = new mongoose.Schema({
-    cityId: Number,
+    cityId:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     cityName: String,
     cityCode: String,
     countryId: Number,

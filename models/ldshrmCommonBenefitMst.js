@@ -2,15 +2,18 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const ldshrmCommonBenefitMstSchema = new mongoose.Schema({
-    bnftId: Number,
+    bnftId:{
+        type: String,
+        unique:true,
+        required: true,
+    },
     bnftName: String,
     bnftCode: String,
     bnftCreatedById: Number,
-    bnftCreatedDate: String,
     bnftModifiedById: Number,
-    bnftModifiedDate: String,
     bnftIsDeleted: Boolean
-
-});
+},
+{ timestamps: true }
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonBenefitMstSchema);
