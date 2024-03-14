@@ -2,10 +2,17 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const acuActionAccess = new mongoose.Schema({
-     id: String,
+  id:{
+    type: String,
+    unique:true,
+    required: true,
+    },
      accessID: Number,
      actionID: Number,
-     isActive: String,
+     isActive:{
+      type: String,
+      required: true,
+      },
      createdById: Number,
      modifiedById: Number,
    },

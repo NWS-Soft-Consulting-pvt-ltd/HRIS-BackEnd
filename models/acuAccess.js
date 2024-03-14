@@ -3,7 +3,11 @@ mongoose.pluralize(null);
 
 const acuAccessSchema = new mongoose.Schema(
   {
-    id: String,
+    id:{
+      type: String,
+      unique:true,
+      required: true,
+      },
     accessFor: Number,
     accessTypeID: Number,
     pageID: Number,

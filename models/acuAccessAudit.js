@@ -2,12 +2,19 @@ const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
 const acuAccessAuditSchema = new mongoose.Schema({
-    historyId: Number,
+    historyId:{
+        type: String,
+        unique:true,
+        required: true,
+        },
     accessID: Number,
     accessFor: Number,
     accessTypeID: Number,
     pageID: Number,
-    isActive: String,
+    isActive:{
+        type: Boolean,
+        required: true,
+        },
     createdById: Number,
     modifiedById: Number,
     historyCreatedById: Number,
