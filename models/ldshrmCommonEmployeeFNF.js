@@ -16,11 +16,10 @@ const ldshrmCommonEmployeeFNFSchema = new mongoose.Schema({
     empFNFCancelRemark: String,
     empFNFIsSentForApproval: Boolean,
     createdById: Number,
-    createdDate: String,
     modifiedById: Number,
-    modifiedDate: String,
     isDeleted: Boolean
-
-});
+},
+{ timestamps: true }
+);
 
 module.exports = mongoose.model("LoginDetails",  ldshrmCommonEmployeeFNFSchema);
