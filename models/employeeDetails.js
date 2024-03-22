@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 mongoose.pluralize(null);
 
-const employeeDetailsSchema = new mongoose.Schema({
+const employeeDetailsSchema = new mongoose.Schema({ 
     bU: String,
     empNo: Number,
     name: String,
@@ -11,7 +11,7 @@ const employeeDetailsSchema = new mongoose.Schema({
     grade: Number,
     level: String,
     nationality: String,
-    type: String
+    type: String 
 
     // qualification: String,
     // registrationNumber: String,
