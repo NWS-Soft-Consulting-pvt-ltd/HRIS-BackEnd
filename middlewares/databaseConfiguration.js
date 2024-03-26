@@ -8,9 +8,9 @@ const databaseConnection = mongoose
   )
   .catch((error) => console.error(error));
 
-const databaseConfiguration = (req, res, next) => {
+const dbConfig = (req, res, next) => {
   req.databaseConnection = databaseConnection;
   next();
 };
 
-module.exports = { databaseConfiguration };
+module.exports = dbConfig;
